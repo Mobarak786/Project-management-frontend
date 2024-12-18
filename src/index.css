@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 dark:text-white dark:bg-gray-900 transition-colors duration-200;
+  }
+}
+
+input{
+  border: none;
+  background-color: transparent;
+}
+input:focus{
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+button{
+  cursor: pointer;
+}
+::-webkit-scrollbar{
+width:7px;
+}
+::-webkit-scrollbar-track{
+background-color:gray;
+
+border-radius: 50px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #DF5532;
+  border-radius: 50px;
+  height: 10px;
+}
+
