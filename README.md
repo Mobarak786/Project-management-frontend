@@ -1,50 +1,47 @@
-# React + TypeScript + Vite
+# Frontend - Project Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend portion of the Project Management application built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+##github link: https://github.com/Mobarak786/Project-management-frontend
+##dployed link: https://project-manage-frontend.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React js
+- TypeScript
+- Vite
+- React-router-dom (FOR ROUTING)
+- Tailwind CSS
+- Redux Toolkit for state management
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- Modern and responsive UI
+- Type-safe development with TypeScript
+- Fast development experience with Vite
+- Component-based architecture
+- State management
+- Routing capabilities
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Getting Started
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+##cloning the repository:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+git clone https://github.com/Mobarak786/Project-management-frontend.git
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Install dependencies:
+
+   npm install (make sure on the Frontend folder)
+
+2. Start the development server:
+
+   npm run dev
+
+frontend/
+├── src/
+│ ├── components/ # Reusable UI components
+│ ├── pages/ # Page components
+│ ├── assets/ # Static assets
+│ ├── styles/ # Global styles
+│ ├── utils/ # Utility functions
+│ └── App.tsx # Main application component
