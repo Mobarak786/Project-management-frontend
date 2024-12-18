@@ -54,7 +54,7 @@ export const {
 export const fetchProjects = ():any => async (dispatch: any) => {
   dispatch(fetchProjectsStart());
   try {
-    const response = await fetch('https://project-manage-frontend.netlify.app/');
+    const response = await fetch('http://localhost:5001/api/projects');
     const data = await response.json();
     dispatch(fetchProjectsSuccess(data));
   } catch (error) {
