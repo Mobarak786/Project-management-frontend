@@ -2,8 +2,11 @@
 
 This is the frontend portion of the Project Management application built with React, TypeScript, and Vite.
 
-##github link: https://github.com/Mobarak786/Project-management-frontend
-##dployed link: https://project-manage-frontend.netlify.app/
+##github link:
+https://github.com/Mobarak786/Project-management-frontend
+
+##dployed link:
+https://project-manage-frontend.netlify.app/
 
 ## Tech Stack
 
