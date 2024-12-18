@@ -54,7 +54,7 @@ export const {
 export const fetchProjects = ():any => async (dispatch: any) => {
   dispatch(fetchProjectsStart());
   try {
-    const response = await fetch('http://localhost:5001/api/projects');
+    const response = await fetch('http://localhost:5000/api/projects');
     const data = await response.json();
     dispatch(fetchProjectsSuccess(data));
   } catch (error) {
