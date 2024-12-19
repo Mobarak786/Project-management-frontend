@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 interface Project {
   id: number;
@@ -54,8 +55,14 @@ export const {
 export const fetchProjects = ():any => async (dispatch: any) => {
   dispatch(fetchProjectsStart());
   try {
-    const response = await fetch('http://localhost:3000/api/projects/');
-    const data = await response.json();
+  
+const response = await axios.get('http://localhost:3000/api/projects/', {
+  headers: {
+    'Content-Security-Policy': "upgrade-insecure-requests"
+  }
+});
+   
+    const data = response.data
     dispatch(fetchProjectsSuccess(data));
   } catch (error) {
     dispatch(fetchProjectsFailure('Failed to fetch projects'));
