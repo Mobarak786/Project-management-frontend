@@ -29,9 +29,9 @@ const Project: React.FC = () => {
 
   return (
     <div className="flex flex-col gap-8 mb-[300px]">
-      {filteredProjects.length ? (
+      {filteredProjects?.length ? (
         <>
-          {filteredProjects.map((project: any) => (
+          {filteredProjects?.map((project: any) => (
             <div
               key={project.id}
               className="flex w-[100%] md:w[80%] shadow-xl"
