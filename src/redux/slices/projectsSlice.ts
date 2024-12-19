@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import axios from 'axios'
 
 interface Project {
   id: number
@@ -63,8 +64,12 @@ export const fetchProjects = (): any => async (dispatch: any) => {
       }
     }
     const baseURL = getURL()
-    const response = await fetch(`${baseURL}/api/projects`)
-    const data = await response.json()
+    const response = await axios.get(`${baseURL}/api/projects`, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    const data = response.data
 
     dispatch(fetchProjectsSuccess(data.data))
     // console.log(data)
