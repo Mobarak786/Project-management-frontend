@@ -55,16 +55,19 @@ export const {
 export const fetchProjects = ():any => async (dispatch: any) => {
   dispatch(fetchProjectsStart());
   try {
-  
-const response = await axios.get('http://localhost:3000/api/projects/', {
-  headers: {
-    'Content-Security-Policy': "upgrade-insecure-requests"
-  }
-});
+    const baseURL = 'http://localhost:3000';
+    
+    const response = await axios.get(`${baseURL}/api/projects/`, {
+      withCredentials: true,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
    
-    const data = response.data
+    const data = response.data;
     dispatch(fetchProjectsSuccess(data));
   } catch (error) {
+    console.error('Error fetching projects:', error);
     dispatch(fetchProjectsFailure('Failed to fetch projects'));
   }
 };
