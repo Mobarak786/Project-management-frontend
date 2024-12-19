@@ -7,7 +7,7 @@ import profileimage from '../assets/Images/profileimage.png'
 
 const Header: React.FC = () => {
   return (
-    <div className="w-[100%] h-[100px] px-4 flex items-center justify-end shadow-md ">
+    <div className=" w-[100%] h-[100px] px-4 shadow-md hidden sm:flex items-center justify-end">
       <div className=" w-[400px] h-[50px] flex items-center justify-center gap-4">
         <div className=" w-max flex items-center justify-center gap-4">
           <ThemeToggle />

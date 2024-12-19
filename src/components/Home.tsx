@@ -8,9 +8,11 @@ const Home: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     <div className="flex h-screen w-screen overflow-hidden">
       <Sidebar />
 
-      <main className="w-[calc(100%-236px)]">
+      <main className="lg:w-[calc(100%-236px)] w-full">
         <Header />
-        <div className="p-5 bg-[#d8d2d2] dark:bg-gray-700">{children}</div>
+        <div className="p-0 bg-[#d8d2d2] sm:bg-white sm:p-5 dark:bg-gray-700">
+          {children}
+        </div>
       </main>
     </div>
   )

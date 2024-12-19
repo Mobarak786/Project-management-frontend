@@ -15,7 +15,7 @@ const sidebarData = [
 
 const Sidebar: React.FC = () => {
   return (
-    <aside className="w-[236px] h-screen bg-[#DF5532] dark:bg-gray-800 text-white">
+    <aside className="w-[236px] h-screen bg-[#DF5532] dark:bg-gray-800 text-white hidden lg:block">
       <div className="flex items-center pl-6 gap-2 mt-5">
         <img src={logo} alt="logo" className="size-6" />
         <h1 className="text-lg font-semibold">LOGO</h1>

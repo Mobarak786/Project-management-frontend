@@ -46,10 +46,10 @@ const Header: React.FC = () => {
         <div className="flex gap-2 items-center cursor-pointer">
           <img
             src={filter}
-            className="size-6 dark:brightness-200"
+            className="size-6 dark:brightness-200 hidden md:block"
             alt="filter"
           />
-          <span className="font-[22px]">Filter</span>
+          <span className="font-[22px] hidden md:block">Filter</span>
 
           <div className="flex items-center gap-2 border dark:border-gray-600 rounded-lg p-2">
             <input

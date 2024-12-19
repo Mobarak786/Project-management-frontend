@@ -34,19 +34,21 @@ const Project: React.FC = () => {
           {filteredProjects.map((project: any) => (
             <div
               key={project.id}
-              className="flex w-[80%] shadow-xl"
+              className="flex w-[100%] md:w[80%] shadow-xl"
               style={{ marginTop: project.id === 1 ? '30px' : '0px' }}
             >
-              <div className="w-[250px] h-[160px] bg-red-700">
+              <div>
                 <img
                   src={project.image}
                   alt="project_image"
-                  className="w-[250px] h-[160px] object-cover"
+                  className="md:w-[250px] md:h-[160px] w-[110px] h-[110px] object-cover"
                 />
               </div>
-              <div className="w-[calc(100%-250px)] flex flex-col justify-between p-4">
+              <div className="md:w-[calc(100%-250px)] w-full flex flex-col justify-between p-4">
                 <div>
-                  <h1 className="text-[20px] font-semibold">{project.title}</h1>
+                  <h1 className="text-[17px] sm:text-[20px] sm:font-semibold font-[400]">
+                    {project.title}
+                  </h1>
                   <p
                     className="text-[15px] font-[500] text-[#9E95A2]
 "
