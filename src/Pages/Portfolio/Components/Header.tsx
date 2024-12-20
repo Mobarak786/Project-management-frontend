@@ -62,12 +62,13 @@ const Header: React.FC = () => {
           />
           <span className="font-[22px] hidden md:block">Filter</span>
 
-          <div className="w-full  flex justify-between items-center gap-2 border dark:border-gray-600 rounded-lg p-2 ">
+          <div className="w-full  flex justify-between items-center border dark:border-gray-600 rounded-lg p-2 ">
             <input
               value={searchTerm}
               onChange={handleSearch}
               type="text"
               placeholder="Search"
+              className="w-[95%]"
             />
             <img src={search} className="size-6" alt="searchicon" />
           </div>

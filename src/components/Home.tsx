@@ -20,11 +20,14 @@ const Home: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         </div>
       </main>
 
+      {/* show mobile device navigation bellow the screen on small devices */}
       {width < 768 && <MobileDeviceNav />}
+
+      {/* show filter button on small devices*/}
       {width < 786 && (
-        <div className=" absolute z-10 shadow-xl bottom-[100px] left-[50%] translate-x-[-50%] w-[170px] h-[70px] rounded-3xl flex items-center justify-center gap-5 bg-[#DF5532]">
+        <div className="z-10 absolute bottom-[100px] left-[50%] translate-x-[-50%] w-[150px] h-[50px] rounded-3xl flex items-center justify-center gap-5 bg-[#c75c41] shadow-lg shadow-[#c75c41]/50">
           <img src={filter_mobile} alt="filterlogo" className="size-7" />
-          <span className="font-[500] text-2xl text-white">Filter</span>
+          <span className="font-[500] text-xl text-white">Filter</span>
         </div>
       )}
     </div>

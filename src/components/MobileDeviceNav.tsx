@@ -13,7 +13,7 @@ const navData = [
 ]
 const MobileDeviceNav: React.FC = () => {
   return (
-    <div className="absolute flex justify-between items-center bottom-0 w-full h-[70px] rounded-t-[30px] shadow-lg bg-white dark:bg-gray-800">
+    <div className="fixed bottom-0 flex justify-between items-center  w-full h-[70px] rounded-t-[30px] shadow-lg bg-white dark:bg-gray-800">
       {navData.map((item, index) => (
         <div
           key={index}
