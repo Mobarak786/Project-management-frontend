@@ -25,7 +25,7 @@ const Home: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
       {/* show filter button on small devices*/}
       {width < 786 && (
-        <div className="z-10 absolute bottom-[100px] left-[50%] translate-x-[-50%] w-[150px] h-[50px] rounded-3xl flex items-center justify-center gap-5 bg-[#c75c41] shadow-lg shadow-[#c75c41]/50">
+        <div className="z-10 fixed bottom-[100px] left-[50%] translate-x-[-50%] w-[150px] h-[50px] rounded-3xl flex items-center justify-center gap-5 bg-[#c75c41] shadow-lg shadow-[#c75c41]/50">
           <img src={filter_mobile} alt="filterlogo" className="size-7" />
           <span className="font-[500] text-xl text-white">Filter</span>
         </div>
