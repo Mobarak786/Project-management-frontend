@@ -9,7 +9,7 @@ const Portfolio: React.FC = () => {
       <div className=" bg-white dark:bg-gray-800 shadow-lg">
         <Header />
         {/* ADDING A SCROLLBAR TO VIEW MULTILPLE PROJECT BY SCROLL  */}
-        <main className="w-[100%] px-5 mt-3 h-screen overflow-y-auto">
+        <main className="w-[100%] sm:px-3 px-5  h-screen overflow-y-auto">
           <Project />
         </main>
       </div>

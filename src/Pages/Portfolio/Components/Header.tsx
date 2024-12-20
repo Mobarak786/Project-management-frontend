@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
+import notification from '../../../assets/Icons/notification_mobile.png'
+import cart from '../../../assets/Icons/cart.png'
+
 import filter from '../../../assets/Icons/filter.png'
 import search from '../../../assets/Icons/search.png'
 import { useDispatch } from 'react-redux'
 import { setSearchText } from '../../../redux/slices/projectsSlice'
+import ThemeToggle from '../../../components/ThemeToggle'
 
 const tabItems = [
   { label: 'Projects', link: '/' },
@@ -26,9 +30,16 @@ const Header: React.FC = () => {
   }, [searchTerm, dispatch])
 
   return (
-    <div className="w-full px-6 py-3 bg-white dark:bg-gray-800 shadow-lg">
-      <h1 className="text-xl  md:text-2xl font-bold">Portfolio</h1>
-      <header className="w-full flex justify-between py-5">
+    <div className=" w-full p-3 sm:p-6 bg-white dark:bg-gray-800 ">
+      <div className="flex items-center justify-between">
+        <h1 className="text-xl  md:text-2xl font-bold">Portfolio</h1>
+        <div className="  sm:hidden w-max flex items-center justify-center gap-4">
+          <ThemeToggle />
+          <img src={cart} alt="Cart" className="size-4" />
+          <img src={notification} alt="Notification" className="size-6" />
+        </div>
+      </div>
+      <header className="w-full grid grid-cols-1 sm:grid-cols-2 gap-2 pt-5">
         <div className="md:w-[500px] w-full flex items-center border-b dark:border-gray-600">
           {tabItems.map((item, index) => (
             <NavLink
@@ -51,7 +62,7 @@ const Header: React.FC = () => {
           />
           <span className="font-[22px] hidden md:block">Filter</span>
 
-          <div className="flex items-center gap-2 border dark:border-gray-600 rounded-lg p-2">
+          <div className="w-full  flex justify-between items-center gap-2 border dark:border-gray-600 rounded-lg p-2 ">
             <input
               value={searchTerm}
               onChange={handleSearch}
